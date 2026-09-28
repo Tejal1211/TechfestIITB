@@ -1,0 +1,11 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 72px; }
+body { @apply bg-ink text-white font-sans antialiased; }
+:focus-visible { outline: 2px solid #19ffa3; outline-offset: 3px; }
+.grid-bg { background-image: linear-gradient(#ffffff0d 1px, transparent 1px), linear-gradient(90deg, #ffffff0d 1px, transparent 1px); background-size: 48px 48px; }
+.outline-text { -webkit-text-stroke: 1.5px #fff; color: transparent; }
+.no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
+@keyframes scan { from { transform: translateY(-100%); } to { transform: translateY(100vh); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
